@@ -1,0 +1,4 @@
+199 source "security/my_inode/Kconfig"
+200 source "security/my_test/Kconfig"
+
+in security/Kconfig

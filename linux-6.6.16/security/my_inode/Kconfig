@@ -1,0 +1,8 @@
+config SECURITY_MY_INODE
+    bool "MY INODE support"
+    depends on SECURITY
+    default n
+    help
+         this selects the My INODE LSM 
+    
+         If you are unsure how to answer this question,answer N.

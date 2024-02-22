@@ -194,6 +194,9 @@ source "security/yama/Kconfig"
 source "security/safesetid/Kconfig"
 source "security/lockdown/Kconfig"
 source "security/landlock/Kconfig"
+source "security/my_inode/Kconfig"
+source "security/my_test/Kconfig"
+
 
 source "security/integrity/Kconfig"
 choice

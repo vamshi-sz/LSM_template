@@ -1,0 +1,9 @@
+config SECURITY_MY_TEST
+    bool "MY TEST support"
+    depends on SECURITY
+    default n
+    help
+   	 this selects the My Task LSM
+   	 
+   	 If you are unsure how to answer this question,answer N.
+
