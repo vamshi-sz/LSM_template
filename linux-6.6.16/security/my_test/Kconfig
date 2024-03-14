@@ -1,4 +1,4 @@
-config SECURITY_MY_TEST
+config SECURITY_MYTEST
     bool "MY TEST support"
     depends on SECURITY
     default n

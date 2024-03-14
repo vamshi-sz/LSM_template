@@ -36,11 +36,25 @@ static int my_lsm_hook_inode_setattr(struct dentry *dentry, struct iattr *attr) 
     return 0; 
 }
 
+
+ static int my_lsm_hook_msg_msg_alloc_security(struct msg_msg *msg)
+ {
+    printk(KERN_INFO "my_lsm_hook_msg_msg_alloc_security is called \n");
+    return 0;
+ }
+
+ void my_lsm_hook_msg_msg_free_security(struct msg_msg *msg)
+ {
+    printk(KERN_INFO "my_lsm_hook_msg_msg_free_security IS CALLED \n");
+ }
+
 static struct security_hook_list my_test_hooks[]={
 	LSM_HOOK_INIT(bprm_check_security, my_test_bprm_check_security),
 	LSM_HOOK_INIT(inode_create, my_lsm_hook_inode_create),
 	LSM_HOOK_INIT(inode_unlink, my_lsm_hook_inode_unlink),
 	LSM_HOOK_INIT(inode_setattr, my_lsm_hook_inode_setattr),
+    LSM_HOOK_INIT(msg_msg_alloc_security, my_lsm_hook_msg_msg_alloc_security),
+    LSM_HOOK_INIT(msg_msg_free_security, my_lsm_hook_msg_msg_free_security),
 };
 
 static int __init my_test_init(void)
