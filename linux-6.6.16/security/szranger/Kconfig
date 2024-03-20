@@ -1,0 +1,9 @@
+config SECURITY_SZRANGER
+     bool "SZRANGER support"
+     depends on SECURITY
+     default n
+     help
+          this selects the SZRANGER LSM
+ 
+          If you are unsure how to answer this question,answer N.
+
