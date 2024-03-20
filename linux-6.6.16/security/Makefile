@@ -8,8 +8,8 @@ obj-$(CONFIG_KEYS)			+= keys/
 # always enable default capabilities
 obj-y					+= commoncap.o
 obj-$(CONFIG_MMU)			+= min_addr.o
-subdir-$(CONFIG_SECURITY_MYTEST) 	+= my_test
-subdir-$(CONFIG_SECURITY_MY_INODE)       += my_inode
+#subdir-$(CONFIG_SECURITY_MY_INODE)       += my_inode
+subdir-$(CONFIG_SECURITY_SZRANGER)       += szranger
 
 # Object file lists
 obj-$(CONFIG_SECURITY)			+= security.o
@@ -26,8 +26,9 @@ obj-$(CONFIG_SECURITY_LOCKDOWN_LSM)	+= lockdown/
 obj-$(CONFIG_CGROUPS)			+= device_cgroup.o
 obj-$(CONFIG_BPF_LSM)			+= bpf/
 obj-$(CONFIG_SECURITY_LANDLOCK)		+= landlock/
-obj-$(CONFIG_SECURITY_MYTEST)		+= my_test/
-obj-$(CONFIG_SECURITY_MY_INODE)         += my_inode/
+#obj-$(CONFIG_SECURITY_MYTEST)		+= my_test/
+#obj-$(CONFIG_SECURITY_MY_INODE)         += my_inode/
+obj-$(CONFIG_SECURITY_SZRANGER)         += szranger/
 
 
 # Object integrity file lists
